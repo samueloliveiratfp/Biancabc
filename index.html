@@ -2017,5 +2017,29 @@
   </div>
 </div>
 
+<!-- Conversão Google Ads: clique no botão WhatsApp -->
+<script>
+  function gtag_report_conversion(url){
+    var callback = function(){
+      if (typeof(url) != 'undefined') { window.open(url, '_blank'); }
+    };
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18216359565/pLxUCP2Nrr4cEI2tnu5D',
+      'value': 1.0,
+      'currency': 'BRL',
+      'event_callback': callback
+    });
+    return false;
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    var waLinks = document.querySelectorAll('a[href*="wa.me/5563992560454"]');
+    waLinks.forEach(function(link){
+      link.addEventListener('click', function(e){
+        e.preventDefault();
+        gtag_report_conversion(this.href);
+      });
+    });
+  });
+</script>
 </body>
 </html>
